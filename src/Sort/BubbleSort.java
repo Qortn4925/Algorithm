@@ -3,11 +3,11 @@ package Sort;
 public class BubbleSort {
 
     public static void main(String[] args) {
-//     int a [] = {5,3,4,1,2};
-     int a []={5,4,3,2,1};
+     int a [] = {5,3,4,1,2};
+//     int a []={5,4,3,2,1};
 
-//     bubbleSort(a);
-     upperBubbleSort(a);
+     bubbleSort(a);
+//     upperBubbleSort(a);
      for(int item: a){
          System.out.println("item = " + item);
      }
@@ -19,8 +19,18 @@ public class BubbleSort {
         int count= 0;
             //버블 소트는 ,
             // s내림차순
-        for(int i =0; i<arr.length-1; i++){
-            for(int j = 0; j<arr.length-1; j++){
+//        for(int i =0; i<arr.length-1; i++){
+//            for(int j = 0; j<arr.length-1; j++){
+//                if(arr[j]>arr[j+1]){
+//                    int tmp =arr[j];
+//                    arr[j]=arr[j+1];
+//                    arr[j+1]=tmp;
+//                    count++;
+//                }
+//            }
+//        }
+        for( int i =0; i<arr.length-1; i++){
+            for(int j=0; j<arr.length-1-i; j++){
                 if(arr[j]>arr[j+1]){
                     int tmp =arr[j];
                     arr[j]=arr[j+1];
@@ -29,6 +39,8 @@ public class BubbleSort {
                 }
             }
         }
+
+
         arr[4]= arr[4]+count;
     }
 
