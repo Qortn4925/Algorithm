@@ -6,7 +6,8 @@ public class BubbleSort {
 //     int a [] = {5,3,4,1,2};
      int a []={5,4,3,2,1};
 
-     bubbleSort(a);
+//     bubbleSort(a);
+     upperBubbleSort(a);
      for(int item: a){
          System.out.println("item = " + item);
      }
@@ -32,6 +33,14 @@ public class BubbleSort {
     }
 
     public static void upperBubbleSort(int[] arr) {
-        f
+        for (int i =0; i<arr.length-1; i++) {
+            for (int j = i+1; j < arr.length-1; j++) {
+            if(arr[j]<arr[j+1]){
+                int tmp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=tmp;
+            }
+            }
+        }
     }
 }
